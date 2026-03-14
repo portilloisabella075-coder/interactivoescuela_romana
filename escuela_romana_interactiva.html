@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Un día en la escuela romana</title>
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f4f6f8;
+text-align:center;
+padding:30px;
+}
+h1{
+color:#333;
+}
+.container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
+}
+.card{
+background:white;
+border-radius:10px;
+width:220px;
+padding:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+cursor:pointer;
+transition:transform .2s;
+}
+.card:hover{
+transform:scale(1.05);
+}
+.info{
+display:none;
+margin-top:10px;
+color:#444;
+font-size:14px;
+}
+.icon{
+font-size:28px;
+}
+</style>
+
+<script>
+function toggle(id){
+var x=document.getElementById(id);
+if(x.style.display==="none" || x.style.display===""){
+x.style.display="block";
+}else{
+x.style.display="none";
+}
+}
+</script>
+</head>
+
+<body>
+
+<h1>¿Cómo era un día en la escuela romana?</h1>
+<p>Haz clic en cada elemento para descubrir más.</p>
+
+<div class="container">
+
+<div class="card" onclick="toggle('inicio')">
+<div class="icon">⏰</div>
+<h3>Inicio temprano</h3>
+<div class="info" id="inicio">
+Las clases comenzaban muy temprano y podían extenderse hasta la tarde.
+</div>
+</div>
+
+<div class="card" onclick="toggle('escritura')">
+<div class="icon">✍</div>
+<h3>Lectura y escritura</h3>
+<div class="info" id="escritura">
+Los estudiantes utilizaban tablillas de cera y estiletes para practicar escritura y cálculo.
+</div>
+</div>
+
+<div class="card" onclick="toggle('libros')">
+<div class="icon">📖</div>
+<h3>Estudio de textos</h3>
+<div class="info" id="libros">
+Los alumnos analizaban obras literarias griegas y romanas para mejorar su conocimiento.
+</div>
+</div>
+
+<div class="card" onclick="toggle('oratoria')">
+<div class="icon">🎤</div>
+<h3>Oratoria</h3>
+<div class="info" id="oratoria">
+Aprendían a hablar en público, debatir y defender ideas con argumentos.
+</div>
+</div>
+
+<div class="card" onclick="toggle('disciplina')">
+<div class="icon">📜</div>
+<h3>Disciplina</h3>
+<div class="info" id="disciplina">
+La enseñanza se basaba en la repetición, memorización y disciplina.
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
